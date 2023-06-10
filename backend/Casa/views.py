@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from .models import Casa
 from .serializers import CasaSerializer
 from django.http import Http404
+from rest_framework import status
 
 from rest_framework.decorators import api_view
 from django.db.models import Q
@@ -31,6 +32,19 @@ class CasaDetail(APIView):
         casa = self.get_object(casa_slug)
         serializer = CasaSerializer(casa)
         return Response(serializer.data)
+
+    def put(self, request, casa_slug, format=None):
+        casa = self.get_object(casa_slug)
+        serializer = CasaSerializer(casa, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, casa_slug, format=None):
+        casa = self.get_object(casa_slug)
+        casa.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['POST'])
 def search(request):

@@ -1,8 +1,8 @@
 <template>
-    <section class="py-5 text-center container">
+    <section style="background-image: url('https://img.freepik.com/free-photo/hand-presenting-model-house-home-loan-campaign_53876-104970.jpg?w=1380&t=st=1686140024~exp=1686140624~hmac=538774a9ca1df42a5bcb4907f40dbf68d60821fa9f60524a859526d77d3e73ea'); background-repeat:no-repeat; object-fit: fill !important;" class="py-5 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">O noua locuinta</h1>
+                <h1 class="fw-light">Un nou acoperis</h1>
                 <p class="lead text-body-secondary">Pentru un nou inceput</p>
 
                 <div class="dropdown">
@@ -18,7 +18,6 @@
     <main role="main">
     <div class="album py-5 bg-light">
         <div class="container">
-
             <div class="row  match-to-row">
                 <div class="col-md-4" v-for="casa in this.case">
                     <div class="card mb-4  box-shadow">

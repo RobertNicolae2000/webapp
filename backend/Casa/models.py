@@ -10,9 +10,14 @@ class Casa(models.Model):
     pret = models.DecimalField(max_digits=8, decimal_places=0)
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
+    numar_telefon = models.DecimalField(max_digits=10, decimal_places=0, default='0')
     description = models.TextField(blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='imagini/', blank=True, null=True)
+    image2 = models.ImageField(upload_to='imagini2/', blank=True, null=True)
+    image3 = models.ImageField(upload_to='imagini3/', blank=True, null=True)
+    image4 = models.ImageField(upload_to='imagini4/', blank=True, null=True)
+    image5 = models.ImageField(upload_to='imagini5/', blank=True, null=True)
 
     class Meta:
         ordering = ('-date_added',)
@@ -23,4 +28,24 @@ class Casa(models.Model):
     def get_image(self):
         if self.image:
             return 'http://localhost:8000' + self.image.url
+        return ''
+
+    def get_image2(self):
+        if self.image2:
+            return 'http://localhost:8000' + self.image2.url
+        return ''
+
+    def get_image3(self):
+        if self.image3:
+            return 'http://localhost:8000' + self.image3.url
+        return ''
+
+    def get_image4(self):
+        if self.image4:
+            return 'http://localhost:8000' + self.image4.url
+        return ''
+
+    def get_image5(self):
+        if self.image5:
+            return 'http://localhost:8000' + self.image5.url
         return ''
