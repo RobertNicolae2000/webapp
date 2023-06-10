@@ -34,9 +34,9 @@
 <script setup>
 import axios from 'axios'
 import {useCartStore} from '@/store/index'
+import {useRouter} from "vue-router";
 
 const cart = useCartStore()
-import {useRouter} from "vue-router";
 
 const router = useRouter()
 
