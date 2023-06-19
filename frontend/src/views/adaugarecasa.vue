@@ -73,10 +73,11 @@
 import axios from 'axios'
 import {useCartStore} from '@/store/index'
 import {ref} from "vue";
+import {useRouter} from "vue-router";
 
 const cart = useCartStore()
 const casa = ref({})
-import {useRouter} from "vue-router";
+
 
 const router = useRouter()
 console.log(cart.user)

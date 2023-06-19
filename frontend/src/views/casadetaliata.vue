@@ -44,7 +44,7 @@
                 </div>
 
                 <!-- Inner -->
-                <div class="carousel-inner">
+                <div class="carousel-inner marime1">
                     <!-- Single item -->
                     <div class="carousel-item active">
                         <img
@@ -224,6 +224,10 @@ export default {
 
 .h-30 {
   height: 30% !important;
+}
+
+.marime1 {
+    height: 600px !important;
 }
 
 .box {

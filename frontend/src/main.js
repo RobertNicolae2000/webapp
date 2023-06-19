@@ -3,7 +3,7 @@ import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import App from './App.vue'
 import axios from 'axios'
-axios.defaults.baseURL ='http://localhost:8000'
+axios.defaults.baseURL ='https://backendimobiliare.azurewebsites.net'
 
 import 'bootstrap/dist/css/bootstrap.css'
 // import 'bootstrap-vue/dist/bootstrap-vue.css'

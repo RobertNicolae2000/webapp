@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure--)0@1gixa8sb6h6c)1*m=%a11(9w#%5nq_7!iam2igw6uvnw(+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['backendimobiliare.azurewebsites.net',
+                 '127.0.0.1']
 
 
 REST_FRAMEWORK = {
@@ -39,7 +40,10 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = ['http://localhost:8080',
-                        'http://127.0.0.1:8000']
+                        'http://127.0.0.1:8000',
+                        'https://backendimobiliare.azurewebsites.net',
+                        'https://thankful-dune-064d97303.3.azurestaticapps.net',]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,7 +57,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'djoser',
     'corsheaders',
-    'Casa'
+    'Casa',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -145,6 +150,12 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+# Azure Blob Storage settings
+DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+AZURE_ACCOUNT_NAME = 'imaginilicenta'
+AZURE_ACCOUNT_KEY = 'uQiq9CJkI5th4nFr/MH6TTyeU41xZtPVBoDoxQoS7q9Kqr6VgpewccHJgUVdkncS3LqabSmGa1gL+AStA6VKqg=='
+AZURE_CONTAINER = 'imaginilicenta'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

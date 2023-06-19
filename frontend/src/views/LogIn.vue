@@ -19,11 +19,13 @@
 </template>
 
 <script setup>
+
 import axios from 'axios'
 import {useRouter} from "vue-router";
-const router = useRouter()
 import {ref} from 'vue'
 import { useCartStore } from '@/store/index'
+
+const router = useRouter()
 const cart = useCartStore()
 const username = ref('')
 const password = ref('')

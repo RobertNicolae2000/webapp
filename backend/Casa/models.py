@@ -27,25 +27,28 @@ class Casa(models.Model):
 
     def get_image(self):
         if self.image:
-            return 'http://localhost:8000' + self.image.url
+            return 'https://imaginilicenta.blob.core.windows.net/imaginilicenta/' + self.image.name
         return ''
 
     def get_image2(self):
         if self.image2:
-            return 'http://localhost:8000' + self.image2.url
+            return 'https://imaginilicenta.blob.core.windows.net/imaginilicenta/' + self.image2.name
         return ''
 
     def get_image3(self):
         if self.image3:
-            return 'http://localhost:8000' + self.image3.url
+            return 'https://imaginilicenta.blob.core.windows.net/imaginilicenta/' + self.image3.name
         return ''
 
     def get_image4(self):
         if self.image4:
-            return 'http://localhost:8000' + self.image4.url
+            return 'https://imaginilicenta.blob.core.windows.net/imaginilicenta/' + self.image4.name
         return ''
 
     def get_image5(self):
         if self.image5:
-            return 'http://localhost:8000' + self.image5.url
+            return 'https://imaginilicenta.blob.core.windows.net/imaginilicenta/' + self.image5.name
         return ''
+
+# https://imaginilicenta.blob.core.windows.net/imaginilicenta/imagini2/2.jpg
+# https://imaginilicenta.blob.core.windows.net/imaginilicenta/imagini4/4.jpg
